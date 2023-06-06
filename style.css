@@ -1,0 +1,211 @@
+/* Defining Global Styles aka Applies to all elements*/
+:root{
+    font-family: Helvetica;
+}
+
+
+/* Setting the Background of the page*/
+body{
+    background: linear-gradient(to right, #000,transparent,#000), no-repeat url("bgImg.jpeg");
+    background-size: 100vw 100vh;
+    margin: 0px;
+}
+
+/* Styling the Navbar and Setting the Navbar Layout as Flex*/
+nav{
+    background-color: #0009;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+/* Changes cursor to pointer. Applies to all buttons in Document */
+button{
+    cursor: pointer;
+}
+
+/* Moderately Moddifing Logo Style */
+#logo{
+    margin-left: 3rem;
+    color: #FFF;
+    font-size: xx-large;
+
+}
+
+
+/* Setting links container layout as flex and Space them evenly*/
+#links{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Removes the useless bullets infront of list item */
+#links li{
+    list-style: none;
+}
+
+#links li a{
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border-radius: 1rem;
+}
+
+/* Hover effect for link */
+#links li a:hover{
+    color: #000;
+    background-color: #FFF;
+}
+
+
+/* Search Box Styling */
+#searchBox{
+    margin-left: auto;
+    margin-top: 5px;
+    height: 90%;
+    width: 20%;
+}
+
+
+/* Setting the Common style used in both Search Bar and Search Button  */
+#searchBox input,
+#searchBox button{
+    color: white;
+    height: 90%;
+
+    --round-off: 30px; /* Using a custom CSS variable to store and reuse the value */
+}
+
+
+#searchBox input{
+    background: transparent;
+    border: 3px solid teal;
+    width: 70%;
+
+    outline: none;
+
+    text-align: center;
+
+    border-radius: var(--round-off) 0px 0px var(--round-off); /* Using that CSS Variable */
+}
+
+#searchBox input:focus{
+    border-color: lightblue;
+}
+
+#searchBox button{
+    width: 20%;
+    background-color: teal;
+    margin-right: 10px;
+    border: 0px;
+    border-radius: 0px var(--round-off) var(--round-off) 0px; /* Reusing the CSS variable */
+    transition: all 0.3s ease-out; 
+
+}
+
+#searchBox button:hover{
+    color: teal;
+    background-color: #FFF;
+}
+
+/* Add an border to simulate the 'Clicking' effect*/
+#searchBox button:active{
+    border: 5px solid black;
+}
+
+/* Using Grid Layout to Split Horizontaly */
+main{
+    display: grid;
+    height: 90vh;
+    place-items: center;
+    grid-template-columns: 50% 50%;
+}
+
+
+/* Slightly Pushing the Content down from its position  */
+.content{
+   /*  margin-top: 20%; */
+    color: whitesmoke;
+    font-size: 30px;
+    padding: 1rem;
+}
+
+.content h1{
+    font-family: Impact;
+    font-size: 50px;
+}
+
+/* Styling the Form */
+.form{
+    height: 70%;
+    width: 50%;
+    
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8)50%,rgba(1, 0, 0, 0.8)50%);
+    padding: 1rem;
+    border-radius: 2rem;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFF;
+
+    box-shadow: 5px 3px 20px #02ffe1d9; /* Responsible for the glow effect */
+
+    /* Flex Layouting the Form */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.form input{
+    background: transparent;
+    color: #FFF;
+    width: 90%;
+    height: 40px;
+    font-size: large;
+    outline: none; /* Removes overlay which appears when in focus */
+
+    border: 0px;
+    border-bottom: 1px solid #02ffe1d9;
+}
+
+.form input:hover{
+    border-bottom: 2px solid white;
+}
+
+.form button{
+    width: 50%;
+    height: 40px;
+    border: 0px;
+    margin-top: 10px;
+    border-radius: 1rem;
+    font-size: large;
+    background-color: #02ffe1d9;
+}
+
+.form button:active{
+    background-color: #FFF;
+}
+
+
+/* Finally Styling the Icons */
+.icons a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.icons ion-icon{
+    color: #ffffff;
+    font-size: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: #02ffe1d9;
+}
